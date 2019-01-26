@@ -1,4 +1,5 @@
 ExUnit.configure(timeout: :infinity)
+ExUnit.configure(formatters: [ExUnit.CLIFormatter, TestmetricsElixirClient])
 ExUnit.start()
 
 {:ok, files} = File.ls("./test/support")

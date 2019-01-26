@@ -11,8 +11,11 @@ blocks:
       env_vars:
         - name: MIX_ENV
           value: test
+        - name: TESTMETRICS_PROJECT_KEY
+          value: ZDHGRl4BUd5GwoJ9SMKAOw
       jobs:
         - name: ExUnit
           commands:
             - checkout
+            - ./bin/setup
             - mix test

@@ -17,7 +17,7 @@ defmodule Mana.MixProject do
         :jsonrpc2
       ],
       elixirc_options: [warnings_as_errors: true],
-      elixir: "~> 1.8",
+      elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       dialyzer: [
         flags: [:underspecs, :unknown, :unmatched_returns],
@@ -44,7 +44,8 @@ defmodule Mana.MixProject do
       {:distillery, "~> 2.0", runtime: false},
       {:artificery,
        github: "mana-ethereum/artificery", branch: "hayesgm/allow-extra-args", override: true},
-      {:logger_file_backend, "~> 0.0.10"}
+      {:logger_file_backend, "~> 0.0.10"},
+      {:testmetrics_elixir_client, "~> 1.1", only: [:test]}
     ]
   end
 end
